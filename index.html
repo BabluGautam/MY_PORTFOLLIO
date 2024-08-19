@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MY PERSONAL PORTFOLIO</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
   </head>
   <body>
     <div id="header">
       <div class="container">
         <nav>
           <img src="logo.png" class="logo" />
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
           </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>UI/UX Deginer</p>
@@ -27,7 +33,7 @@
     </div>
 
     <!-- -----------about Me----------- -->
-    <div class="about">
+    <div id="about">
       <div class="container">
         <div class="row">
           <div class="about-row-1">
@@ -35,15 +41,161 @@
           </div>
           <div class="about-row-2">
             <h1 class="sub-tittle">About Me</h1>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis tempore, praesentium quo, commodi sit vitae cumque corrupti nobis, sunt dignissimos laudantium consequatur iure ullam cupiditate nemo eos voluptates blanditiis quidem sint! Nisi adipisci culpa modi ex, explicabo ipsam voluptate incidunt molestiae corporis deserunt, ullam atque veniam non ducimus. Consequuntur, quam!z</p>
-<div class="tab-titles">
-    <p class="tab-links active-links">Skills</p>
-    <p class="tab-links">Experience</p>
-    <p class="tab-links">Education</p>
-</div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Reiciendis tempore, praesentium quo, commodi sit vitae cumque
+              corrupti nobis, sunt dignissimos laudantium consequatur iure ullam
+              cupiditate nemo eos voluptates blanditiis quidem sint! Nisi
+              adipisci culpa modi ex, explicabo ipsam voluptate incidunt
+              molestiae corporis deserunt, ullam atque veniam non ducimus.
+              Consequuntur, quam!z
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-links" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('educations')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/Ux</span><br />Desiging Web/App Interface</li>
+                <li><span>Web Development</span><br />Web app Development</li>
+                <li>
+                  <span> App Development</span><br />Building Andriod/IOS App
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2021-current</span><br />Desig Traning at Et Institute
+                </li>
+                <li><span>2019-2021</span><br />Team Lead StartApp At LLC</li>
+                <li>
+                  <span> 2017-2019</span><br />Intership At ekart ecommerce
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="educations">
+              <ul>
+                <li><span>2016</span><br />Desiging Web/App Interface</li>
+                <li>
+                  <span>2016</span><br />12th from punjab Aggriculter unvirsity
+                </li>
+                <li><span> 2014</span><br />10th pass local</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-tittle">My Services</h1>
+      </div>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web-Degin</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            debitis magnam vero error quibusdam tempore dolor rem commodi
+            consectetur ut.
+          </p>
+          <a href="#">learn more</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-app-store"></i>
+          <h2>App-Degin</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            debitis magnam vero error quibusdam tempore dolor rem commodi
+            consectetur ut.
+          </p>
+          <a href="#">learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-crop"></i>
+          <h2>UX/UI-Degin</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            debitis magnam vero error quibusdam tempore dolor rem commodi
+            consectetur ut.
+          </p>
+          <a href="#">learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------services-------------- -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-tittle">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="work-1.png" >
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, odit.</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="work-2.png" >
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, odit.</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="work-3.png" >
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, odit.</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+
+    <!-- ---------------contact---------------- -->
+     <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-tittle">Contact Me</h1>
+            <p> <i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+            <p><i class="fa-solid fa-square-phone"></i>7009299004</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/bablu-gautam-b29540286/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="my-cv.pdf" download class="btn btn2">Download CV</a>
+
+          </div>
+          <div class="contact-right">
+            <form  name='submit-to-google-sheet'>
+              <input type="text" name="Name" placeholder="Your name" required>
+              <input type="email" name="Email" placeholder="Your Email" required>
+              <textarea name= "Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+     </div>
+     <div class="copyright">
+      copyright <i class="fa-regular fa-copyright"></i> . Made with <i class="fa-solid fa-heart"></i>BabluGautam.....
+     </div>
   </body>
+  <script src="script.js"></script>
 </html>
